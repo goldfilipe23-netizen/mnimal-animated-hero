@@ -721,7 +721,7 @@ export default function HomePage() {
 
       {/* Header Navigation */}
       <header className="relative z-10 flex items-center justify-between px-4 sm:px-6 py-4 lg:px-12">
-        <div className="flex items-center space-x-2 pl-3 sm:pl-6 lg:pl-12">
+          <div className="hidden items-center space-x-2 pl-3 sm:pl-6 lg:pl-12">
           <img src="/v0-logo.png" alt="Logo" className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12" />
         </div>
 
@@ -781,12 +781,11 @@ export default function HomePage() {
           </div>
         </div>
 
-        <h1 className="text-white text-4xl sm:text-3xl md:text-5xl lg:text-6xl xl:text-8xl font-bold leading-tight mb-4 sm:mb-6 text-balance">
-          Build a Portfolio
+        <h1 className="text-white text-4xl sm:text-3xl md:text-5xl lg:text-6xl xl:text-8xl font-normal leading-tight mb-4 sm:mb-6 text-balance">
+          HorizonVZG
           <br />
-          in{" "}
           <LineShadowText className="italic font-light" shadowColor="white">
-            Minutes
+            Plattform
           </LineShadowText>
         </h1>
 

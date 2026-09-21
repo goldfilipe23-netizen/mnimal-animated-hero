@@ -7,7 +7,7 @@ interface LineShadowTextProps extends Omit<React.HTMLAttributes<HTMLElement>, ke
   as?: React.ElementType
 }
 
-const MotionSpan = motion.create("span")
+const MotionSpan = motion.span
 
 export function LineShadowText({
   children,

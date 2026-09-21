@@ -13,8 +13,9 @@ export default function HomePage() {
     <div className="min-h-screen relative overflow-hidden">
       <div className="absolute inset-0 bg-black">
         {/* Flowing wave rays overlay */}
-        <div className="absolute inset-0">
-          <svg
+      <div className="absolute inset-0">
+        <span className="absolute left-6 top-6 z-10 text-sm font-medium tracking-[0.3em] text-white/70">VZG</span>
+        <svg
             className="absolute inset-0 w-full h-full"
             viewBox="0 0 1200 800"
             fill="none"

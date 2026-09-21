@@ -7,6 +7,8 @@ interface LineShadowTextProps extends Omit<React.HTMLAttributes<HTMLElement>, ke
   as?: React.ElementType
 }
 
+const MotionSpan = motion.create("span")
+
 export function LineShadowText({
   children,
   shadowColor = "black",
@@ -14,15 +16,18 @@ export function LineShadowText({
   as: Component = "span",
   ...props
 }: LineShadowTextProps) {
-  const MotionComponent = motion.create(Component)
   const content = typeof children === "string" ? children : null
+
+  if (Component !== "span") {
+    return <Component {...props} className={className}>{content}</Component>
+  }
 
   if (!content) {
     throw new Error("LineShadowText only accepts string content")
   }
 
   return (
-    <MotionComponent
+    <MotionSpan
       style={{ "--shadow-color": shadowColor } as React.CSSProperties}
       className={cn(
         "relative z-0 inline-flex",
@@ -36,6 +41,6 @@ export function LineShadowText({
       {...props}
     >
       {content}
-    </MotionComponent>
+    </MotionSpan>
   )
 }
